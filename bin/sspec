@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 spec_file"
+  exit 1
+fi
+
+mit-scheme --batch-mode --load `dirname $0`/../lib/sspec.scm < $1
