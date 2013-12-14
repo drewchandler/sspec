@@ -17,6 +17,9 @@ RSpec style framework for MIT Scheme
 
   (it "handles errors in specs" (lambda ()
     (donkey)))
+
+  (it "can assert error messages" (lambda ()
+    (assert-error (lambda () (error "my error message")) "my error message")))
 )
 ```
 
