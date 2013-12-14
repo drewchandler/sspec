@@ -30,4 +30,5 @@ SSpec
   gets angry when your value is falsey... FAILS - Expected value to be truthy
   supports error messages... FAILS - I AM A STABBING ROBOT
   handles errors in specs... FAILS - Unbound variable: donkey
+  can assert error messages... PASSES
 ```
