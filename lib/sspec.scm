@@ -15,7 +15,10 @@
         (lambda (message)
           (if (string=? message "__NO_ERROR__")
             (fail "No error was thrown")
-            (assert (string=? message expected-error) "Error messages do not match"))
+            (assert (string=? message expected-error) (string-append
+                                                        "Error messages do not match:\n"
+                                                        "Expected: " expected-error "\n"
+                                                        "Actual: " message)))
           (kappa #f))
         #f
         (lambda () (l) (error "__NO_ERROR__")))))) 'assert-error))
